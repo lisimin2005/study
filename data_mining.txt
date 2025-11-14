@@ -1,0 +1,35 @@
+动态获取 data.csv 的路径
+script_dir = os.path.dirname(os.path.abspath(__file__))  # 获取脚本所在目录
+data_path = os.path.join(script_dir, 'data.csv')         # 拼接完整路径
+points = np.genfromtxt(data_path, delimiter=',') 
+
+
+
+
+
+
+
+10.22
+关联规则
+
+关联规则挖掘：
+典型是购物篮分析：找出顾客购买行为发生交易数据库中不同商品（项）之间的联系
+
+
+支持度
+置信度confidence：同时
+提升度 ：=1表明没有相关性，相互独立；反映了关联规则中的......，>1    <1
+支持度、置信度越高越好
+
+
+
+'''
+antecedents：前件
+consequents：后件
+support：支持度
+confidence：置信度
+lift：提升度（自动计算）
+leverage：杠杆率
+conviction：确信度
+'''
+
